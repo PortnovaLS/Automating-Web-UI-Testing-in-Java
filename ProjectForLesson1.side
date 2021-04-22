@@ -1,0 +1,291 @@
+{
+  "id": "a5a4f684-f242-419c-99cf-f64602815a51",
+  "version": "2.0",
+  "name": "ProjectForLesson1",
+  "url": "https://kudago.com/msk/events/",
+  "tests": [{
+    "id": "6fbc0569-a990-4b14-b532-caaa94ffc0c3",
+    "name": "Positive login to kudago.com",
+    "commands": [{
+      "id": "9bc8f450-14fe-4486-8ad7-d7deec60a6ea",
+      "comment": "",
+      "command": "open",
+      "target": "https://kudago.com/msk/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d519ca0-934f-4f1c-9e85-fa37878dd88b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a65f8cd0-6e1f-40ee-b0b5-244673b98621",
+      "comment": "",
+      "command": "click",
+      "target": "css=#user-zone >a",
+      "targets": [
+        ["css=.login-link > .user-zone-underline", "css:finder"],
+        ["xpath=//div[@id='userzone']/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c5d179d-edd1-4a5c-9adc-d51f4b88aa62",
+      "comment": "",
+      "command": "type",
+      "target": "css=.body #auth-form-login > .authPopup-input:nth-child(3)",
+      "targets": [
+        ["css=.body #auth-form-login > .authPopup-input:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@name='username'])[2]", "xpath:attributes"],
+        ["xpath=(//form[@id='auth-form-login']/input)[3]", "xpath:idRelative"],
+        ["xpath=//div/div/form[2]/input", "xpath:position"]
+      ],
+      "value": "lyubovportnovapottnova@yandex.ru"
+    }, {
+      "id": "c10f8c3e-da4d-446d-9354-44eb9942563d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.body #auth-form-login > .authPopup-input:nth-child(4)",
+      "targets": [
+        ["css=.body #auth-form-login > .authPopup-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@name='password'])[2]", "xpath:attributes"],
+        ["xpath=(//form[@id='auth-form-login']/input[2])[2]", "xpath:idRelative"],
+        ["xpath=//div/div/form[2]/input[2]", "xpath:position"]
+      ],
+      "value": "qq9147[["
+    }, {
+      "id": "58b9ffe8-ed27-470c-a347-6d99f5d6c24b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.body #auth-form-login > .authPopup-button",
+      "targets": [
+        ["css=.body #auth-form-login > .authPopup-button", "css:finder"],
+        ["xpath=(//form[@id='auth-form-login']/button)[2]", "xpath:idRelative"],
+        ["xpath=//div/div/form[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9401210-b2ee-48a9-b31a-92dc69f0bc13",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//span[@class='user-zone-underline']",
+      "targets": [],
+      "value": "Lyubov"
+    }]
+  }, {
+    "id": "e1617fe9-6eba-45a2-a79d-fbc63038985f",
+    "name": "Positive log out to kudago.com",
+    "commands": [{
+      "id": "b7eb8fb3-5e2d-4c90-8834-70d3fae8e342",
+      "comment": "",
+      "command": "open",
+      "target": "https://kudago.com/user/858940/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f9729b2-71d7-4733-b08c-29ead843b4a7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1750dca-4ba0-4c5e-823e-072bdc9ad027",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-zone-toggle-dropdown",
+      "targets": [
+        ["css=.user-zone-toggle-dropdown", "css:finder"],
+        ["xpath=//div[@id='user-zone']/div/div/i", "xpath:idRelative"],
+        ["xpath=//div/i", "xpath:position"],
+        ["xpath=//i[contains(.,'')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9d834e9-cab1-4084-a07f-57788ef6b4cd",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@href='/account/logout/?next=https://kudago.com/user/858940/']",
+      "targets": [],
+      "value": "Выйти"
+    }, {
+      "id": "d074ec8d-5eb0-4159-8b29-5dc0e4f29a23",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.excursions-link",
+      "targets": [
+        ["css=.excursions-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/msk/excursions/')]", "xpath:href"],
+        ["xpath=//a[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d98cec2a-78d9-46f4-b31f-318d341760ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-link > .user-zone-underline",
+      "targets": [
+        ["css=.login-link > .user-zone-underline", "css:finder"],
+        ["xpath=//div[@id='userzone']/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Вход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac9cf227-e32e-454a-b91b-1fb8b85114cd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@class='user-zone-underline'][text()='Вход']",
+      "targets": [
+        ["css=.authLogout-link", "css:finder"],
+        ["xpath=//div[@id='user-zone']/div/div[2]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/account/logout/?next=https://kudago.com/user/858940/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2a6afca4-9e5b-42d0-8964-2d23f203a81e",
+    "name": "Check button \"Выбор даты\"",
+    "commands": [{
+      "id": "80270b62-075c-4af1-8ea6-525a42657faa",
+      "comment": "",
+      "command": "open",
+      "target": "https://kudago.com/msk/events/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e389355-b57c-4be8-a06b-a0a6e04eb061",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b3772f7-1515-4917-abeb-007162e1978b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='DayPicker-choosenDate navbar-item-link']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a221aa9-ad05-4aaa-8ea4-13af61a5257d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[@aria-label='сб 24 апр. 2021 г.']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d25bd74f-7ef4-4725-b63e-f2ab0864ef54",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@aria-label='сб 24 апр. 2021 г.']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be709408-b7d3-496a-8913-169756fa94dc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@class='button']",
+      "targets": [
+        ["css=.DayPicker-Week:nth-child(4) > .DayPicker-Day:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='react-date-picker']/div/div[2]/div/div/div[2]/div/div[3]/div[4]/div[6]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4cf2532-5eeb-47ac-8117-5612905038d9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[@id='react-date-picker']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef78a9a2-72cd-4dcd-af08-f88b2bd9f707",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='DayPicker-choosenDate navbar-item-link']",
+      "targets": [],
+      "value": "24 апреля"
+    }]
+  }, {
+    "id": "48056794-c3b1-4cea-b69b-1c090ea6312f",
+    "name": "Check button \"Добавить событие\"",
+    "commands": [{
+      "id": "78bbe048-3fbf-4c5f-9898-9e7a678cbd48",
+      "comment": "",
+      "command": "open",
+      "target": "https://kudago.com/msk/events/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b08763f6-ce8f-42b9-88b7-a13190502832",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x743",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "013b0ab5-b687-44a9-aa20-497fef3bbb74",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//a[@href='https://kudago.com/pages/about/adv/']",
+      "targets": [
+        ["css=.fs-item:nth-child(10) .fs-item-comments", "css:finder"],
+        ["xpath=//div[@id='featured-slider']/div/ul/li[10]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/msk/event/vyistavka-eldorado-sokrovischa-indejtsev-fevral-2019/#comments')]", "xpath:href"],
+        ["xpath=//li[10]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' 25')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "062c33c5-a02a-4bb9-a534-f4652ac203e3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@href='https://kudago.com/pages/about/adv/']",
+      "targets": [
+        ["linkText=+ Добавить событие", "linkText"],
+        ["css=.add-event-button", "css:finder"],
+        ["xpath=//a[contains(text(),'+ Добавить событие')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://kudago.com/pages/about/adv/')]", "xpath:href"],
+        ["xpath=//section/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'+ Добавить событие')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90f0a815-d724-4084-9cb1-f00515b965d5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[@class='t338__buttonwrapper']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a334b1f8-10a8-40ba-8466-affa648f3919",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//td[text()='Получить прайс и презентацию']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b3a8a98d-78bc-4740-9aac-62e07f751b03",
+    "name": "Positive login and logout Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6fbc0569-a990-4b14-b532-caaa94ffc0c3", "e1617fe9-6eba-45a2-a79d-fbc63038985f"]
+  }, {
+    "id": "fafd03a8-f6e2-4d0a-aaf5-67c13a9a1480",
+    "name": "Check Buttons on page https://kudago.com/msk/events/",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2a6afca4-9e5b-42d0-8964-2d23f203a81e", "48056794-c3b1-4cea-b69b-1c090ea6312f"]
+  }],
+  "urls": ["https://kudago.com/", "https://kudago.com/user/858940/", "https://kudago.com/msk/events/"],
+  "plugins": []
+}
